@@ -42,6 +42,7 @@ class Birthday {
   }
   update() {
     ctx.globalCompositeOperation = "hard-light";
+
     ctx.fillStyle = "rgba(20,20,20,0.15)";
     ctx.fillRect(0, 0, this.width, this.height);
 
@@ -133,7 +134,7 @@ class Firework {
       ctx.beginPath();
       ctx.font = "100px Brush Script MT";
       ctx.textAlign = "center";
-      ctx.fillText("Happy Birthday Lavanya !", canvas.width/2, canvas.height/2);
+      ctx.fillText("Happy Birthday Vital !", canvas.width/2, canvas.height/2);
       ctx.fillStyle = "hsl(" + this.shade + ",100%,50%)";
       ctx.arc(this.x, this.y, 1, 0, PI2, false);
       ctx.arc(this.x, this.y, 1 + 2, 0, PI2, true);
