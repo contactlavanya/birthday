@@ -1,14 +1,29 @@
 <!DOCTYPE html>
-<html >
-<head>
-  <meta charset="UTF-8">
-  <title>Happy Birthday</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
+<html>
 <body>
-  <div>
-  <canvas id="birthday"></canvas>
-  <script  src="js/index.js"></script>
-</div>
+<canvas id="canvas" style='background-color:#EEE;' width='500px' height='200px'/>
+<script type='text/javascript'>
+    var canvas= document.getElementById('canvas');
+    var ctx = canvas.getContext('2d');
+<!-- ww w  .jav  a 2s  .co m-->
+    var w = canvas.width;
+    var h = canvas.height;
+    var r1 = Math.min(w, h) * 0.4;    // outer radius
+    var r0 = r1 - 40;                 // inner radius
+    var n = 32;                       // number of blocks
+    var theta = 2 * Math.PI / n;
+    var phi = theta * 0.45;           // relative half-block width
+    ctx.save();
+    ctx.fillStyle = '#C2428A';
+    ctx.translate(w / 2, h / 2);      // move to center of circle
+    for (var i = 0; i < n; ++i) {
+        ctx.beginPath();
+        ctx.arc(0, 0, r0, -phi, phi);
+        ctx.arc(0, 0, r1, phi, -phi, true);
+        ctx.fill();
+        ctx.rotate(theta);            // rotate the coordinates by one bloc
+    }
+    ctx.restore();
+</script>
 </body>
 </html>

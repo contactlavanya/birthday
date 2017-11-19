@@ -123,9 +123,10 @@ class Firework {
         ctx.beginPath();
         ctx.font = "100px Brush Script MT";
         ctx.textAlign = "center";
-        ctx.fillText("Happy Birthday Lavanya !", canvas.width/2, canvas.height/2);
+        ctx.fillText("Happy Birthday Vital !", canvas.width/2, canvas.height/2);
         ctx.fillStyle = "hsl(" + this.shade + ",100%," + i + "%)";
         ctx.arc(point.x, point.y, 1, 0, PI2, false);
+        ctx.arc(point.x, point.y, 1+2, 0, PI2, true);
         ctx.fill();
       }
     else {
@@ -135,6 +136,7 @@ class Firework {
       ctx.fillText("Happy Birthday Lavanya !", canvas.width/2, canvas.height/2);
       ctx.fillStyle = "hsl(" + this.shade + ",100%,50%)";
       ctx.arc(this.x, this.y, 1, 0, PI2, false);
+      ctx.arc(this.x, this.y, 1 + 2, 0, PI2, true);
       ctx.fill();
     }
   }
