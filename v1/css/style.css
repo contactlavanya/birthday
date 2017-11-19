@@ -1,0 +1,13 @@
+/*basic styles for black background and crosshair cursor*/
+body{
+    background-color:white;
+	margin: 0;
+	font-size: 16px;
+	font-family: Verdana;
+}
+
+
+canvas{
+	cursor: crosshair;
+	display: block;
+}
